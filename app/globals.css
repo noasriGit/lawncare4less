@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+/* Satoshi only – from public/Satoshi-Variable.ttf (served at /) */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f6f2;
+  --foreground: #2d2d2d;
+  --green-50: #f0f7f0;
+  --green-100: #d9ecd9;
+  --green-200: #b3d9b3;
+  --green-500: #4a7c4a;
+  --green-600: #3d6b3d;
+  --green-700: #2f5a2f;
+  --green-800: #264826;
+  --charcoal: #2d2d2d;
+  --charcoal-light: #4a4a4a;
+  --off-white: #f8f6f2;
+  --off-white-warm: #f5f2ec;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-200: var(--green-200);
+  --color-green-500: var(--green-500);
+  --color-green-600: var(--green-600);
+  --color-green-700: var(--green-700);
+  --color-green-800: var(--green-800);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-off-white: var(--off-white);
+  --color-off-white-warm: var(--off-white-warm);
+  --font-sans: "Satoshi";
+  --font-mono: "Satoshi";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  font-family: "Satoshi";
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Satoshi";
+}
+
+/* Focus visible for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--green-500);
+  outline-offset: 2px;
+}
+
+/* Grass curtain load animation */
+@keyframes grass-sway {
+  0%,
+  100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
 }
