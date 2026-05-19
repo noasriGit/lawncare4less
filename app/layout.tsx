@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import GrassCurtain from "@/components/GrassCurtain";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lawncare4less.vercel.app"),
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <GrassCurtain />
         {children}
+        <Analytics />
       </body>
     </html>
   );
