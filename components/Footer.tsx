@@ -34,6 +34,17 @@ export default function Footer() {
         </div>
         <div className="mt-10 border-t border-charcoal-light/30 pt-8 text-center text-sm text-green-100">
           <p>&copy; {new Date().getFullYear()} Lawn Care 4 Less. All rights reserved.</p>
+          <p className="mt-3">
+            Website made by{" "}
+            <a
+              href="https://nvdigitalconsulting.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-100 underline decoration-green-100/50 underline-offset-2 transition-colors hover:text-white hover:decoration-white"
+            >
+              NV Digital Consulting
+            </a>
+          </p>
         </div>
       </div>
     </footer>
